@@ -121,7 +121,7 @@ function randomstring(length = 20) {
  * Set initial bot message to the screen for the user.
  */
 $(window).on('load', function () {
-	showBotMessage('Hello there! Type in a message.');
+	showBotMessage("Help me...");
 });
 
 //Beggining of Mikes JS

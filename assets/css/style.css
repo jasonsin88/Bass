@@ -1,31 +1,11 @@
-/* mikes original CSS
-.top_menu {
-    
-    background-color: red;
-    border: 2px solid black;
-    width: 200px;
-    flex-wrap: wrap;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: white;
-    height: 30px;
-    line-height: 30px;
-    
-    transition: background-color 0.5s ease;
-    }
-   
-    .btn:hover { background-color: maroon; } */
-
     * {
         box-sizing: border-box;
     }
     
     body {
-        background-color: #edeff2;
-        font-family: 'Calibri', 'Roboto', sans-serif;
+        background-image: url(/assets/images/peakpx.jpg);
+        background-size: contain;
+        font-family: "lacquer";
     }
     
     .row.padded_row,
@@ -38,22 +18,21 @@
     /* ---------------------------------------------------------------------- */
     
     .chat_window {
-        border-radius: 10px;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        background-color: #f8f8f8;
+
+        /* border-radius: 10px; */
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); */
+        /* background-color: slategray; */
         overflow: hidden;
     }
     
     .top_menu {
-        background-color: #fff;
         padding: 13px 0px;
         box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     }
     
     .top_menu .title {
         text-align: center;
-        color: #337ab7;
-        font-size: 20px;
+        font-size: 25px;
     }
     
     /* messages inside the chatbox */
@@ -133,7 +112,7 @@
     
     .messages .message.left .text_wrapper {
         background-color: #f3eeca;
-        margin-left: 20px;
+        margin-left: 5px;
     }
     
     .messages .message.left .text_wrapper::after,
@@ -155,7 +134,7 @@
     
     .messages .message.right .text_wrapper {
         background-color: #b0d4f3;
-        margin-right: 20px;
+        margin-right: 5px;
         float: right;
     }
     
