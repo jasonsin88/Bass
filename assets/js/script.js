@@ -6,20 +6,27 @@ function getApi() {
   //var requestUrl = "https://insult.mattbas.org/api/en/adjective";
   var requestUrl = "https://insult.mattbas.org/api/insult"
 
-  fetch(requestUrl)
+  fetch(requestUrl, {
+    method: "GET",
+    headers: {
+      "Content-Type": "text/plain"
+    }
+  
+  })
     .then(function (response) {
-      return response.json();
+      return response.text();
     })
     .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
+      console.log(data)
+       
         var listItem = document.createElement('li');
-        listItem.textContent = data[i].html_url;
+        listItem.textContent = data;
         repoList.appendChild(listItem);
-      }
+      
     });
 }
 
-send_button.addEventListener('key_event', getApi);
+send_button.addEventListener('click', getApi);
 
 /**
  * Returns the current datetime for the message creation.
@@ -95,7 +102,7 @@ $('#send_button').on('click', function (e) {
 
 	// show bot message
 	setTimeout(function () {
-		showBotMessage(randomstring());
+		showBotMessage(listItem());
 	}, 300);
 });
 
@@ -154,18 +161,22 @@ function selectOption(_option) {
 
 const textNodes = [
   {
-    id: 1,
-    text: "Hey little boy its me, Michael Spencer",
     options: [
       {
-        text: 'Smile bud',
-        setState: {Smiles: true},
-        nextText:  2
-      },
-      {
-        text: 'No smiling today',
+    text: "Hey little boy its me, Michael Spencer",
+   
+    nextText: 4,
+      
+        text: "Smile bud",
+        
+        nextText:  5,
+      
+      
+        text: "No smiling today",
         nextText: 3
+      
       }
+
 
     ]
   }
