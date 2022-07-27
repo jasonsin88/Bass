@@ -1,6 +1,22 @@
 var repoList = document.querySelector('ul');
 var send_button = document.getElementById('send_button');
 
+// function getPexels() {
+//   var requestUrl = "https://cors-anywhere.herokuapp.com/https://api.pexels.com/v1/"
+//   fetch(requestUrl, {
+//     method: "GET",
+//     headers: {
+//       "Authorization" : "Bearer 563492ad6f91700001000001e459f743d73f40e89c03d9807d683f96",
+//       "x-requested-with" : "xhmlhttprequest"
+//     }
+//   }).then(function (response){
+//     return response.json()
+//   })
+//   .then(function(data){
+//     console.log(data)
+//   })
+// }
+// getPexels()
 function getApi() {
   // chat bot code and API
   //var requestUrl = "https://insult.mattbas.org/api/en/adjective";
@@ -9,7 +25,7 @@ function getApi() {
   fetch(requestUrl, {
     method: "GET",
     headers: {
-      "Content-Type": "text/plain"
+      "Content-Type" : "text/plain"
     }
   
   })
