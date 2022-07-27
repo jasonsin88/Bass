@@ -1,112 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- seo related -->
-    <title>Chatbot Frontend</title>
-
-    <!-- meta related -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+   <!--- <meta http-equiv="Content-Type" content="text/html"/>  -->
+    <title>Title</title>
+    <!-- seo related -->
+    <title>Chatbot Frontend</title>
     <!-- vendor css & style files -->
     <script src="https://cdn.tailwindcss.com"></script>
-   
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" -->
+        <!-- rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" -->
+        <!-- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
+    <!-- </script> -->
+
     <!-- custom css -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-
 </head>
 
 <body>
 
     <div class="container">
-        <div class="row padded_row">
+        <div class="p-5 grid grid-cols-12 gap-4">
             <!-- right side content -->
-            <div class="col-md-7">
-                <div class="chat_window">
-                    <div class="top_menu">
-                        <div class="title">ChatBot - Jarvis</div>
+            <div class="col-span-8">
+                <div class="chat_window rounded-xl opacity-75">
+                    <div class="top_menu bg-slate-300 rounded-xl">
+                        <div class="title">L Y D I A</div>
                     </div>
                     <!-- dynamically rendered -->
                     <ul class="messages"></ul>
-
                     <!-- input -->
-                    <div class="bottom_wrapper">
+                    <div class="bottom_wrapper rounded-xl">
                         <input id="msg_input" placeholder="Say Hi to begin chat..." />
-                        <div id="send_button" class="app_button_1">Send</div>
+                        <div id="send_button" class="key_event self-center">Send</div>
                     </div>
-
                 </div>
-
             </div>
 
-            <!-- left side content -->
-            <div class="col-md-5">
-                <div class="chat_window">
-
+            <div class="col-span-4">
+                <div class="chat_window rounded-xl bg-slate-300 opacity-75">
                     <div class="top_menu">
-                        <div class="title">Help</div>
+                        <div class="title font-semibold tracking-widest">Make your choice...<br/>carefully...</div>
                     </div>
-
-                    <!-- help container -->
+                    <!-- choice container -->
                     <div class="panel-group" id="accordion">
-
-                        <!-- help - 1 -->
+                        <!-- choice - 1 -->
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"
-                                        href="#collapse1"></a>
+                                    <a class="accordion" data-toggle="collapse" data-parent="#accordion"
+                                        href="#collapse1">
+                                        <aria-label>Choice 1</aria-label>
+                                    </a>
                                 </h4>
                             </div>
                             <div id="collapse1" class="panel-collapse collapse in">
                                 <div class="panel-body">
-                                    <!DOCTYPE html>
-                                    <html lang="en">
-
-                                    <head>
-                                        <meta charset="viewport" content="width-device-width" , initial-scale="1.0">
-                                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                                        <link href="styles.css" rel="stylesheet">
-                                        <title>Text Adventure</title>
-                                    </head>
-
-                                    <body>
-                                        <div class="containter">
-                                            <div id="text">Text</div>
-                                        </div id="option-buttons" class='btn-grid'>
-                                        <button class="btn">Option 1</button>
-                                        <button class="btn">Option 2</button>
-                                        <button class="btn">Option 3</button>
-                                        <button class="btn">Option 4</button>
                                 </div>
-</body>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div>
-</div>
-</div>
+    </div>
+    <div class="containter btn-grid" id="option-buttons">
+        <div id="text">Text</div>
+    </div>
 
-</div>
+    <!-- vendor script files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+    </script>
 
-</div>
-</div>
-
-</div>
-
-</div>
-
-<!-- vendor script files -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-</script>
-
-<!-- custom scripts -->
-<script src="static/main.js"></script>
+    <!-- custom scripts -->
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
