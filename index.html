@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!--- <meta http-equiv="Content-Type" content="text/html"/>  -->
-    <title>Title</title>
+    <!--- <meta http-equiv="Content-Type" content="text/html"/>  -->
+    <title>CHoose Your Horror Story</title>
     <!-- seo related -->
-    <title>Chatbot Frontend</title>
     <!-- vendor css & style files -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
         rel="stylesheet">
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" -->
-        <!-- rel="stylesheet"> -->
+    <!-- rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" -->
-        <!-- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
+    <!-- integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> -->
     <!-- </script> -->
 
     <!-- custom css -->
@@ -34,14 +34,14 @@
             <div class="col-span-8">
                 <div class="chat_window rounded-xl opacity-75">
                     <div class="top_menu bg-slate-300 rounded-xl">
-                        <div class="title">L Y D I A</div>
+                        <div class="title">Speak with L Y D I A... if you Dare.</div>
                     </div>
                     <!-- dynamically rendered -->
                     <ul class="messages"></ul>
                     <!-- input -->
                     <div class="bottom_wrapper rounded-xl">
                         <input id="msg_input" placeholder="Say Hi to begin chat..." />
-                        <div id="send_button" class="key_event self-center">Send</div>
+                        <div type= "button" id= "send_button" class="keyevent self-center">Send</div>
 
                     </div>
                 </div>
@@ -50,7 +50,7 @@
             <div class="col-span-4">
                 <div class="chat_window rounded-xl bg-slate-300 opacity-75">
                     <div class="top_menu">
-                        <div class="title font-semibold tracking-widest">Make your choice...<br/>carefully...</div>
+                        <div class="title font-semibold tracking-widest">Make your choice...<br />carefully...</div>
                     </div>
                     <!-- choice container -->
                     <div class="panel-group" id="accordion">
@@ -60,19 +60,28 @@
                                 <h4 class="panel-title">
                                     <a class="accordion" data-toggle="collapse" data-parent="#accordion"
                                         href="#collapse1">
-                                        <aria-label>Choice 1</aria-label>
+                                        <aria-label>Choices</aria-label>
                                     </a>
+                                    <div>
+                                        <h3 class="prompt">/</h3>
                                 </h4>
+                                <h5>What do you do?</h5>
                             </div>
-                            <div id="collapse1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                </div>
+                            <div>
+                                <select title="chooser" class="chooser"></select>
+                                <button type="button" class="act-btn">Act</button>
+                            </div>
+
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                            <div class="panel-body">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 

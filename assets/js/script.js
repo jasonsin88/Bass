@@ -42,13 +42,11 @@ function getApi() {
     });
 }
 
-send_button.addEventListener('click', getApi);
-
 /**
  * Returns the current datetime for the message creation.
  */
- function getCurrentTimestamp() {
-	return new Date();
+function getCurrentTimestamp() {
+  return new Date();
 }
 
 /**
@@ -56,8 +54,9 @@ send_button.addEventListener('click', getApi);
  * This is called from the `showUserMessage` and `showBotMessage`.
  */
 function renderMessageToScreen(args) {
-	// local variables
-	let displayDate = (args.time || getCurrentTimestamp()).toLocaleString('en-IN', {
+  // local variables
+  send_button.addEventListener('click', getApi);
+  let displayDate = (args.time || getCurrentTimestamp()).toLocaleString('en-IN', {
 		month: 'short',
 		day: 'numeric',
 		hour: 'numeric',
@@ -74,7 +73,7 @@ function renderMessageToScreen(args) {
 			<div class="timestamp">${displayDate}</div>
 		</div>
 	</li>
-	`);
+	${send_button.addEventListener('click', getApi)}`);
 
 	// add to parent
 	messagesContainer.append(message);
@@ -144,73 +143,143 @@ function randomstring(length = 20) {
  * Set initial bot message to the screen for the user.
  */
 $(window).on('load', function () {
-	showBotMessage("Help me...");
+	showBotMessage("Run or Die...");
 });
 
-//Beggining of Mikes JS
-const textElement = document.getElementById('text')
-const optionButtonsElement = document.getElementById('option-buttons')
+function getApi2() {
+  var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=&q=Scary+dolls&limit=25&offset=0&rating=g&lang=en"
 
-let state = {}
-
-function startGame() {
+  fetch(requestUrl, {
+    method: "GET",
+    headers: {
+      "Content-Type" : "image"
+    }
   
-}
-
-function showTextNode(_textNodeIndex) {
-const textNode = textNodes.find(textNodeIndex => textNode.id ---
-  textNodeIndex) 
-  textElement.innerText = textNode.text
-  while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
-  }
-}
-
-function showOption(_option) {
-  return true
-  
-}
-
-function selectOption(_option) {
-  
-}
-
-const textNodes = [
-  {
-    options: [
-      {
-    text: "Hey little boy its me, Michael Spencer",
-   
-    nextText: 4,
-      
-        text: "Smile bud",
-        
-        nextText:  5,
-      
-      
-        text: "No smiling today",
-        nextText: 3
-      
-      }
-
-
-    ]
-  }
-
-  // {
-    //   id: 2,
-  //   text: 'You cannot even read this shi',
-  //   options:
-  // }
-
-]
-textNodes[0].options.forEach(option => {
-  if (showOption(option)) {
-    const button = document.createElement('button')
-    button.innerText = option.text
-    button.classList.add('btn')
-    button.addEventListener('click' , () => selectOption(option))
-    optionButtonsElement.appendChild(button)
-  }
   })
-StartGame()
+    .then(function (response) {
+      return response.image();
+    })
+    .then(function (data) {
+      console.log(data)
+      });
+}
+
+
+
+const gameConfig = [
+  {
+    choice: "Start",
+    prompt: "You wake up in a house you've never been in and you see a scary doll in front of you!",
+    options: ["Run", "Fight"]
+  },
+  {
+    choice: "Run",
+    prompt: "There's a fireplace big enough to hide in.",
+    options: ["Hide", "Run passed it"]
+  },
+  {
+    choice: "Fight",
+    prompt: "You die!",
+    options: ["Sorry", "Little boy"]
+  },
+  {
+    choice: "Hide",
+    prompt: "You hear footsteps, little girl footsteps",
+    options: ["Stay where you are", "Oof, I dunno man"
+    ]
+    },
+    {
+    choice: "Run passed it",
+    prompt: "You died",
+    options: ["Sorry"],
+    },
+    {
+    choice: "Stay where you are",
+    prompt: "A few minutes have passed by and now it seems quiet",
+    options: ["Keep waiting a few more minutes", "GTFO"]
+    },
+    {
+    choice: "GTFO",
+    prompt: "Okay you've GTFO'd but you run into a second spooky little girl :/",
+    options: ["Not cool bro", "GTFO again!"]
+    },
+    {
+    choice: "Oof, I dunno man",
+    prompt: "Then you die my dude",
+    options: ["Sorry"]
+    },
+    {
+    choice: "Keep waiting a few more minutes",
+    prompt: "Bad idea buddy, now you're dead",
+    options: ["Sorry"]
+    },
+    {
+    choice: "Not cool bro",
+    prompt: "You're not cool bro, YOU DIE",
+    options: ["Sorry"]
+    },
+    {
+    choice: "GTFO again!",
+    prompt: "Alright, you've GTFO'd again, but now theres three dolls",
+    options:["No biggie, I've taken doll fighting courses in karate", "Look for any possible ritual artifact I can use to exorsise these dolls"]
+    },
+    {
+    choice: "No biggie, I've taken doll fighting courses in karate",
+    prompt: "You obviously couldn't kill one doll, what makes you think you can take all three? YOU DIED",
+    options: ["Sorry"]
+    },
+    {
+    choice: "Look for any possible ritual artifact I can use to exorsise these dolls",
+    prompt: "You see a bible, and a voodoo doll",
+    options: ["Bible", "Voodoo doll"]
+    },
+    {
+    choice: "Bible",
+    prompt: "uh, okay, but now what are you gonna say?",
+    options: ["THE POWER OF CHRIST COMPELS YOU", "Listen you guys, I'd be really apreciative if we didn't have to do this right now, I have a project I gotta present on tuesday"]
+    },
+    {
+    choice: "Listen you guys, I'd be really apreciative if we didn't have to do this right now, I have a project I gotta present on tuesday",
+    prompt: "You think they give a fuck what you gotta do? They got more important problems, YOU DIED",
+    options: ["Sorry"]
+    },
+    {
+    choice: "THE POWER OF CHRIST COMPELS YOU",
+    prompt: '"Oh, does it? Does it compel me?"',
+    options: ["Just give up, we are hopeless", "THE POWER OF CHRIST COMPELS YOU!"]
+    },
+    {
+    choice: "Just give up, we are hopeless",
+    prompt: 'BRUH, you were so close, YOU DIED',
+    options: ["Sorry"]
+    },
+    {
+    choice: "THE POWER OF CHRIST COMPELS YOU!",
+    prompt: '"Does it Sarah? Is the power of Christ compelling me? Is that whats happening?"',
+    options: ['These dolls are OP dude, lets just give up', 'THE POWER OF CHRIST COMPELS YOU!!']
+    },
+    {
+    choice: "These dolls are OP dude, lets just give up",
+    prompt: "you are dead",
+    options: ["Sorry"]
+    },
+    {
+    choice: "THE POWER OF CHRIST COMPELS YOU!!",
+    prompt: '"okay weve been compelled, sorry about that..."',
+    options: ["You are a winner!"]
+    },
+];
+const prompt = document.querySelector(".prompt");
+const chooser = document.querySelector(".chooser");
+const actBtn = document.querySelector(".act-btn");
+function act(choice) {
+  prompt.textContent = gameConfig.filter(
+    config => config.choice === choice
+  )[0].prompt;
+  chooser.innerHTML = gameConfig
+    .filter(config => config.choice === choice)[0]
+    .options.map(option => `<option value="${option}">${option}</option>`)
+    .join("");
+}
+actBtn.addEventListener("click", () => act(chooser.value));
+act("Start");
