@@ -21,7 +21,7 @@ function getApi() {
   // chat bot code and API
   //var requestUrl = "https://insult.mattbas.org/api/en/adjective";
   var requestUrl = "https://insult.mattbas.org/api/insult"
-
+  
   fetch(requestUrl, {
     method: "GET",
     headers: {
@@ -34,11 +34,10 @@ function getApi() {
     })
     .then(function (data) {
       console.log(data)
-       
         var listItem = document.createElement('li');
+        listItem.className = 'insult';      
         listItem.textContent = data;
         repoList.appendChild(listItem);
-      
     });
 }
 
@@ -73,7 +72,8 @@ function renderMessageToScreen(args) {
 			<div class="timestamp">${displayDate}</div>
 		</div>
 	</li>
-	${send_button.addEventListener('click', getApi)}`);
+	${send_button.addEventListener('click', getApi)}
+  `);
 
 	// add to parent
 	messagesContainer.append(message);
@@ -101,7 +101,7 @@ function showUserMessage(message, datetime) {
  */
 function showBotMessage(message, datetime) {
 	renderMessageToScreen({
-		text: message,
+    text: message,
 		time: datetime,
 		message_side: 'left',
 	});
@@ -116,28 +116,28 @@ $('#send_button').on('click', function (e) {
 	$('#msg_input').val('');
 
 	// show bot message
-	setTimeout(function () {
-		showBotMessage(listItem());
+	setTimeout(function() {
+		showBotMessage(listItem);
 	}, 300);
 });
 
 /**
  * Returns a random string. Just to specify bot message to the user.
  */
-function randomstring(length = 20) {
-	let output = '';
+// function randomstring(length = 20) {
+// 	let output = '';
 
-	// magic function
-	var randomchar = function () {
-		var n = Math.floor(Math.random() * 62);
-		if (n < 10) return n;
-		if (n < 36) return String.fromCharCode(n + 55);
-		return String.fromCharCode(n + 61);
-	};
+// 	// magic function
+// 	var randomchar = function () {
+// 		var n = Math.floor(Math.random() * 62);
+// 		if (n < 10) return n;
+// 		if (n < 36) return String.fromCharCode(n + 55);
+// 		return String.fromCharCode(n + 61);
+// 	};
 
-	while (output.length < length) output += randomchar();
-	return output;
-}
+// 	while (output.length < length) output += randomchar();
+// 	return output;
+// }
 
 /**
  * Set initial bot message to the screen for the user.
