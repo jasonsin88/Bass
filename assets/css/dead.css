@@ -1,0 +1,32 @@
+*{
+    box-sizing: cover;
+}
+
+
+body{
+    background-color: black;
+    background-size:cover;
+}
+
+.row.padded_row,
+    .row.padded_row > div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+
+.picture{
+    display: contents;
+    flex-wrap: wrap;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+#link{
+    color: White;
+    font-size: xx-large;
+    font-family: "lacquer";
+    text-align: center;
+    text-decoration: none;
+}

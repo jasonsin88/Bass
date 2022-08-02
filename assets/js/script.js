@@ -146,26 +146,6 @@ $(window).on('load', function () {
 	showBotMessage("Run or Die...");
 });
 
-function getApi2() {
-  var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=&q=Scary+dolls&limit=25&offset=0&rating=g&lang=en"
-
-  fetch(requestUrl, {
-    method: "GET",
-    headers: {
-      "Content-Type" : "image"
-    }
-  
-  })
-    .then(function (response) {
-      return response.image();
-    })
-    .then(function (data) {
-      console.log(data)
-      });
-}
-
-
-
 const gameConfig = [
   {
     choice: "Start",
@@ -267,6 +247,16 @@ const gameConfig = [
     choice: "THE POWER OF CHRIST COMPELS YOU!!",
     prompt: '"okay weve been compelled, sorry about that..."',
     options: ["You are a winner!"]
+    },
+    {
+    choice: "Voodoo doll",
+    prompt: 'Nice choice, I like the flavor, but still :( you die',
+    options: ["Sorry"]
+    },
+     {
+    choice:"You are a winner!",
+    prompt: 'Only a Loser would do that >:( Now you have lost!',
+    options: ["Sorry"]
     },
 ];
 const prompt = document.querySelector(".prompt");
