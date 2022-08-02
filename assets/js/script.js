@@ -146,7 +146,10 @@ $(window).on('load', function () {
 	showBotMessage("Run or Die...");
 });
 
+
+
 const gameConfig = [
+
   {
     choice: "Start",
     prompt: "You wake up in a house you've never been in and you see a scary doll in front of you!",
@@ -160,7 +163,7 @@ const gameConfig = [
   {
     choice: "Fight",
     prompt: "You die!",
-    options: ["Sorry", "Little boy"]
+    options: ["Sorry"]
   },
   {
     choice: "Hide",
@@ -259,10 +262,19 @@ const gameConfig = [
     options: ["Sorry"]
     },
 ];
+
+
+
 const prompt = document.querySelector(".prompt");
 const chooser = document.querySelector(".chooser");
 const actBtn = document.querySelector(".act-btn");
 function act(choice) {
+var option = gameConfig.filter(
+  config => config.choice === choice )[0].options
+  console.log(option)
+  if(option.includes("Sorry")){
+    window.location.assign("/dead.html")
+  }
   prompt.textContent = gameConfig.filter(
     config => config.choice === choice
   )[0].prompt;

@@ -1,31 +1,28 @@
 *{
     box-sizing: cover;
+    color: black;
 }
 
 
 body{
-    background-color: black;
-    background-size:cover;
-}
-
-.row.padded_row,
-    .row.padded_row > div {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
+    color:black;
+    margin-bottom: 20rem;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    background: url("https://api.giphy.com/v1/gifs/search?api_key=fiwH9Jsh3wjA7Tg7WOM1EcePf4acTo5r&q=scary+the+ring&limit=25&offset=0&rating=r&lang=en");
+   }
 
 .picture{
-    display: contents;
-    flex-wrap: wrap;
-    text-align: center;
-    text-decoration: none;
-    
+    margin: 50rem;
+    width: 100vw;
+    height:100vh;
+    color:black;
+    display: grid;
 }
 
 #link{
-    color: White;
-    font-size: xx-large;
+    color: black;
     font-family: "lacquer";
     text-align: center;
     text-decoration: none;
