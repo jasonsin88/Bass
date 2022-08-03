@@ -3,7 +3,7 @@
     }
     
     body {
-        background-image: url(../images/peakpx.jpg);
+        background-image: url(./images/peakpx.jpg);
         background-size:cover;
         font-family: "lacquer";
     }
@@ -106,7 +106,7 @@
     
     .messages .message.left .avatar {
         float: left;
-        background: url('../images/Lydia.jpg');
+        background: url('./images/Lydia.jpg');
     }
     
     .messages .message.left .text_wrapper {
@@ -138,7 +138,7 @@
     
     .messages .message.right .avatar {
         float: right;
-        background: url('../images/user.jpg');
+        background: url('./images/user.jpg');
     }
     
     .messages .message.right .text_wrapper {
