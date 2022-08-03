@@ -22,3 +22,7 @@ Choose your actions wisely. For your soul is on the line...whether you escape th
 ![Insulted by Lydia](/assets/images/Insulted%20by%20Lydia.png)
 
 ![You're Dead](/assets/images/You're%20Dead.png)
+
+## Links
+* GitHub: https://github.com/jasonsin88/Bass
+* Deployed: https://jasonsin88.github.io/Bass/
