@@ -117,7 +117,7 @@ $('#send_button').on('click', function (e) {
 
 	// show bot message
 	setTimeout(function() {
-		showBotMessage(listItem);
+		showBotMessage();
 	}, 300);
 });
 
@@ -273,7 +273,7 @@ var option = gameConfig.filter(
   config => config.choice === choice )[0].options
   console.log(option)
   if(option.includes("Sorry")){
-    window.location.assign("/dead.html")
+    window.location.assign("/dead/dead.html")
   }
   prompt.textContent = gameConfig.filter(
     config => config.choice === choice
