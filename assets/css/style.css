@@ -3,7 +3,7 @@
     }
     
     body {
-        background-image: url(./images/peakpx.jpg);
+        background-image:url(../images/peakpx.jpg);
         background-size:cover;
         font-family: "lacquer";
     }
