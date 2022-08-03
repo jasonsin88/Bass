@@ -8,13 +8,13 @@ When the game loads, the player was met with a text message from Lydia. Only...y
 Choose your actions wisely. For your soul is on the line...whether you escape the house, or you forever belong to Lydia...the choice is in your hands.
 
 ## Technologies
-HTML
-CSS
-Tailwind CSS
-JavaScript
-Google Fonts
-Giphy API
-MATTBAS Insult API
+* HTML
+* CSS
+* Tailwind CSS
+* JavaScript
+* Google Fonts
+* Giphy API
+* MATTBAS Insult API
 
 ## Screenshots
 ![Start](/assets/images/Start.png)
