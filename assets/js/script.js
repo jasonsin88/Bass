@@ -117,7 +117,7 @@ $('#send_button').on('click', function (e) {
 
 	// show bot message
 	setTimeout(function() {
-		showBotMessage();
+		showBotMessage(listItem);
 	}, 300);
 });
 
